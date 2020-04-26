@@ -1,0 +1,9 @@
+D:\VSProject\source\Project\ApiWarframe\bin\Debug\netcoreapp3.1\ApiWarframe.deps.json
+D:\VSProject\source\Project\ApiWarframe\bin\Debug\netcoreapp3.1\ApiWarframe.dll
+D:\VSProject\source\Project\ApiWarframe\bin\Debug\netcoreapp3.1\ApiWarframe.pdb
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netcoreapp3.1\ApiWarframe.AssemblyInfoInputs.cache
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netcoreapp3.1\ApiWarframe.AssemblyInfo.cs
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netcoreapp3.1\ApiWarframe.dll
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netcoreapp3.1\ApiWarframe.pdb
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netcoreapp3.1\ApiWarframe.csprojAssemblyReference.cache
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netcoreapp3.1\ApiWarframe.csproj.CoreCompileInputs.cache
