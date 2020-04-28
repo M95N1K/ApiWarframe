@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Text.Json;
-using System.Net;
 
 namespace ApiWarframe
 {
@@ -8,6 +7,7 @@ namespace ApiWarframe
     {
         public struct Fissures_Date //Миссия разрыва
         {
+            public int tierNum { get; set; }
             public string id { get; set; }
             public string activation { get; set; }
             public string startString { get; set; }
@@ -17,17 +17,17 @@ namespace ApiWarframe
             public string missionType { get; set; }
             public string enemy { get; set; }
             public string tier { get; set; }
-            public int tierNum { get; set; }
             public Boolean expired { get; set; }
             public string eta { get; set; }
         }
 
         public Fissures_Date[] Fissures { get; set; }
 
-        public void Update_data(int Api, int Platform)
+        public void Update_data()
         {
             string json = "{\"Fissures\":" + GetJson("fissures") + "}";
-            Get_Fissures ad = JsonSerializer.Deserialize<Get_Fissures>(json);
+            
+            var ad = JsonSerializer.Deserialize<Get_Fissures>(json);
             Fissures = ad.Fissures;
         }
     }

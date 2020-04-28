@@ -6,6 +6,7 @@ namespace ApiWarframe
 {
     public class Arbitration_data : API_Warframe //Арбитраж
     {
+        
         public string activation { get; set; }
         public string expiry { get; set; }
         public string enemy { get; set; }
@@ -13,6 +14,7 @@ namespace ApiWarframe
         public Boolean archwing { get; set; }
         public Boolean sharkwing { get; set; }
         public string node { get; set; }
+        
 
         public void Update_data()
         {
