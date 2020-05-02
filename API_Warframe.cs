@@ -1,10 +1,11 @@
 ﻿//using System;
-//using System.Text.Json;
+using System.Text.Json;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace ApiWarframe
 {
-    public class API_Warframe
+    public partial class API_Warframe
     {
         static string https = "https";
         static string api = "ws";
