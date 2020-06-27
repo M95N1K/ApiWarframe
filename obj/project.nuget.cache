@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pwTKcy2A9q2EOyuLt7lGj0TxxuiJbFF39DX3p6rrOvM/UTQRBhlu8SHJjml9+gbChE467ZdtHToJc2Ax1WOohA==",
+  "dgSpecHash": "BRLyQM2XxTCBQdKK+Xt/tPeNFAfv5MFRLHN3b+Pz2x2lnuBew/lFUShuNStawsc34vWBHZ2zdGBhv1R3ryppjA==",
   "success": true,
   "projectFilePath": "D:\\VSProject\\source\\Project\\ApiWarframe\\ApiWarframe.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\mysni\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\mysni\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

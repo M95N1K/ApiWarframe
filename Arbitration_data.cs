@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text.Json;
-using System.Net;
+﻿using ApiWarframe.Models;
 
 namespace ApiWarframe
 {
@@ -9,26 +7,11 @@ namespace ApiWarframe
         public class Arbitration_data : API_Warframe //Арбитраж
         {
 
-            public string activation { get; set; }
-            public string expiry { get; set; }
-            public string enemy { get; set; }
-            public string type { get; set; }
-            public Boolean archwing { get; set; }
-            public Boolean sharkwing { get; set; }
-            public string node { get; set; }
+            public MArbitration_data ArbitrationData;
 
-
-            public void Update_data()
+            public void UpdateData()
             {
-                string json = GetJson("arbitration");
-                Arbitration_data ad = JsonSerializer.Deserialize<Arbitration_data>(json);
-                activation = ad.activation;
-                expiry = ad.expiry;
-                enemy = ad.enemy;
-                type = ad.type;
-                archwing = ad.archwing;
-                sharkwing = ad.sharkwing;
-                node = ad.node;
+                ArbitrationData = GetJson<MArbitration_data>("arbitration");
             }
         }
     }

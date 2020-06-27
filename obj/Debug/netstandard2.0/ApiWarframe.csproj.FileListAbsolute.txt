@@ -1,0 +1,13 @@
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netstandard2.0\ApiWarframe.csprojAssemblyReference.cache
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netstandard2.0\ApiWarframe.AssemblyInfoInputs.cache
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netstandard2.0\ApiWarframe.AssemblyInfo.cs
+D:\VSProject\source\Project\ApiWarframe\bin\Debug\netstandard2.0\ApiWarframe.deps.json
+D:\VSProject\source\Project\ApiWarframe\bin\Debug\netstandard2.0\ApiWarframe.dll
+D:\VSProject\source\Project\ApiWarframe\bin\Debug\netstandard2.0\ApiWarframe.pdb
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netstandard2.0\ApiWarframe.dll
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netstandard2.0\ApiWarframe.pdb
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netstandard2.0\ApiWarframe.csproj.CoreCompileInputs.cache
+D:\VSProject\source\Project\ApiWarframe\bin\Debug\netstandard2.0\ApiWarframe.xml
+D:\VSProject\source\Project\ApiWarframe\bin\Debug\netstandard2.0\Newtonsoft.Json.dll
+D:\VSProject\source\Project\ApiWarframe\bin\Debug\netstandard2.0\Newtonsoft.Json.xml
+D:\VSProject\source\Project\ApiWarframe\obj\Debug\netstandard2.0\ApiWarframe.csproj.CopyComplete

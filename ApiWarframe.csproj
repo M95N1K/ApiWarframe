@@ -1,7 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>D:\VSProject\source\Project\ApiWarframe\ApiWarframe.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\DOCS\Обучение\Вебинары\Основы_С#_уровень2\WebService\Client\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
 
 </Project>

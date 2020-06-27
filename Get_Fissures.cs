@@ -1,36 +1,58 @@
-﻿using System;
-using System.Text.Json;
+﻿using ApiWarframe.Models;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ApiWarframe
 {
     public partial class API_Warframe
     {
-        public class Get_Fissures //Список миссий разрыва
+        public class Get_Fissures : API_Warframe //Список миссий разрыва
         {
-            public struct Fissures_Date //Миссия разрыва
+
+            public List<Fissures_Date> Fissures = new List<Fissures_Date>();
+
+            public void UpdateData()
             {
-                public int tierNum { get; set; }
-                public string id { get; set; }
-                public string activation { get; set; }
-                public string startString { get; set; }
-                public string expiry { get; set; }
-                public Boolean active { get; set; }
-                public string node { get; set; }
-                public string missionType { get; set; }
-                public string enemy { get; set; }
-                public string tier { get; set; }
-                public Boolean expired { get; set; }
-                public string eta { get; set; }
+                Fissures = GetJson<List<Fissures_Date>>("fissures");
             }
 
-            public Fissures_Date[] Fissures { get; set; }
-
-            public void Update_data()
+            public void Sort()
             {
-                string json = "{\"Fissures\":" + GetJson("fissures") + "}";
+                Comper comper = new Comper();
+                Fissures.Sort(comper); 
+            }
+        }
 
-                var ad = JsonSerializer.Deserialize<Get_Fissures>(json);
-                Fissures = ad.Fissures;
+        private class Comper : IComparer<Fissures_Date>
+        {
+            public int Compare(Fissures_Date x, Fissures_Date y)
+            {
+                if (x == null)
+                {
+                    if (y == null)
+                    {
+                        return 0;
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+                }
+                else
+                {
+                    if (y == null)
+                        return 1;
+                    else
+                    {
+                        if (x.tierNum > y.tierNum)
+                            return 1;
+                        else if (x.tierNum < y.tierNum)
+                            return -1;
+                    }
+                }
+
+                return 0;
             }
         }
     }
