@@ -8,11 +8,14 @@ namespace ApiWarframe
     {
         public class Earth_rotation : API_Warframe //Земля День-Ночь
         {
-            public MEarth_rotation EarthRotation;
+            public MEarth_rotation EarthRotation { get; private set; }
 
+            /// <summary>
+            /// Обновляет данные
+            /// </summary>
             public void UpdateData(int Api, int Platform)
             {
-                EarthRotation = GetJson< MEarth_rotation>("earthCycle");
+                EarthRotation = GetDate< MEarth_rotation>("earthCycle");
             }
         }
     }

@@ -1,29 +1,56 @@
 ﻿//using System;
 using Newtonsoft.Json;
+using System;
 using System.Net;
+using System.Runtime.CompilerServices;
 
 namespace ApiWarframe
 {
     public partial class API_Warframe
     {
-        static string https = "https";
-        static string api = "ws";
-        static string platform = "pc/";
-        static string languege = "en";
-        static string url = https + "://" + api + ".warframestat.us/" + platform;
+        static internal HTTPs https { get; private set; }
+        static internal Apis api { get; private set; }
+        static internal string platform { get; private set; }
+        static internal string languege { get; private set; }
+        static internal string url { get; private set; }
 
-        public static void SetOption(HTTPs httpvalue, Apis apivalue, string _platform, string _languege)
+        internal string suburl;
+
+        static API_Warframe()
         {
-            https = httpvalue.ToString();
-            api = apivalue.ToString();
-            platform = _platform;
-            languege = _languege;
+            https = HTTPs.https;
+            api = Apis.api;
+            platform = "pc/";
+            languege = "en";
             url = https + "://" + api + ".warframestat.us/" + platform;
         }
 
-        public T GetJson<T>(string suburl)
+        /// <summary>
+        /// Указывает тип соединения, платформу и язык, которые будут использоваться при загрузке данных
+        /// </summary>
+        /// <param name="httpvalue"> Http или HttpS</param>
+        /// <param name="apivalue">API или WS</param>
+        /// <param name="_platform">Для какой платформы считывать данные</param>
+        /// <param name="_languege">язык данных</param>
+        public static void SetOption(HTTPs httpvalue, Apis apivalue, string _platform, string _languege)
+        {
+            https = httpvalue;
+            api = apivalue;
+            platform = _platform;
+            languege = _languege;
+            url = https.ToString() + "://" + api.ToString() + ".warframestat.us/" + platform;
+        }
+
+        /// <summary>
+        /// Считывает данные из сервера в модель этих данных
+        /// </summary>
+        /// <typeparam name="T">Модель данных (класс)</typeparam>
+        /// <param name="suburl">Подстрока адресса по которой выдаются данные</param>
+        /// <returns></returns>
+        public T GetDate<T>(string suburl)
         {
             string json = "";
+            
             using (WebClient wc = new WebClient())
             {
                 wc.Headers.Add("Accept-Language", languege);
@@ -35,5 +62,8 @@ namespace ApiWarframe
             return js;
         }
 
+        
+
     }
+
 }

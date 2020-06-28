@@ -7,11 +7,14 @@ namespace ApiWarframe
         public class Arbitration_data : API_Warframe //Арбитраж
         {
 
-            public MArbitration_data ArbitrationData;
+            public MArbitration_data ArbitrationData { get; private set; }
 
+            /// <summary>
+            /// Обновляет данные
+            /// </summary>
             public void UpdateData()
             {
-                ArbitrationData = GetJson<MArbitration_data>("arbitration");
+                ArbitrationData = GetDate<MArbitration_data>("arbitration");
             }
         }
     }

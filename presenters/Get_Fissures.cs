@@ -2,26 +2,45 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 namespace ApiWarframe
 {
     public partial class API_Warframe
     {
+        /// <summary>
+        /// Класс для получения списка миссий разрыва бездны
+        /// </summary>
         public class Get_Fissures : API_Warframe //Список миссий разрыва
         {
+            /// <summary>
+            /// Возврощает список миссий разрыва бездны
+            /// </summary>
+            public List<Fissures_Date> Fissures { get; private set; }
 
-            public List<Fissures_Date> Fissures = new List<Fissures_Date>();
-
-            public void UpdateData()
+            /// <summary>
+            /// Конструктор ЛЕГО
+            /// </summary>
+            public Get_Fissures()
             {
-                Fissures = GetJson<List<Fissures_Date>>("fissures");
+                suburl = "fissures";
             }
 
-            public void Sort()
+            /// <summary>
+            /// Обновляет данные
+            /// </summary>
+            public void UpdateData()
+            {
+                Fissures = GetDate<List<Fissures_Date>>(suburl);
+                Sort();
+            }
+
+            private void Sort()
             {
                 Comper comper = new Comper();
                 Fissures.Sort(comper); 
             }
+            
         }
 
         private class Comper : IComparer<Fissures_Date>

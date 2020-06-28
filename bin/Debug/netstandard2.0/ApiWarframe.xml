@@ -4,5 +4,117 @@
         <name>ApiWarframe</name>
     </assembly>
     <members>
+        <member name="M:ApiWarframe.API_Warframe.SetOption(ApiWarframe.HTTPs,ApiWarframe.Apis,System.String,System.String)">
+            <summary>
+            Указывает тип соединения, платформу и язык, которые будут использоваться при загрузке данных
+            </summary>
+            <param name="httpvalue"> Http или HttpS</param>
+            <param name="apivalue">API или WS</param>
+            <param name="_platform">Для какой платформы считывать данные</param>
+            <param name="_languege">язык данных</param>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.GetDate``1(System.String)">
+            <summary>
+            Считывает данные из сервера в модель этих данных
+            </summary>
+            <typeparam name="T">Модель данных (класс)</typeparam>
+            <param name="suburl">Подстрока адресса по которой выдаются данные</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Arbitration_data.UpdateData">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Cetus_rotation.UpdateData(System.Int32,System.Int32)">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Earth_rotation.UpdateData(System.Int32,System.Int32)">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="T:ApiWarframe.API_Warframe.Get_Fissures">
+            <summary>
+            Класс для получения списка миссий разрыва бездны
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.API_Warframe.Get_Fissures.Fissures">
+            <summary>
+            Возврощает список миссий разрыва бездны
+            </summary>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Get_Fissures.#ctor">
+            <summary>
+            Конструктор ЛЕГО
+            </summary>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Get_Fissures.UpdateData">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.API_Warframe.Orb_Vallis.OrbVallisData">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Orb_Vallis.UpdateData">
+            <summary>
+            Обновляет данные
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.Models.Fissures_Date.expiry">
+            <summary>
+            Дата окончания
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.Models.Fissures_Date.active">
+            <summary>
+            Активность
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.Models.Fissures_Date.node">
+            <summary>
+            Узел миссии
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.Models.Fissures_Date.missionType">
+            <summary>
+            Тип миссии
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.Models.Fissures_Date.enemy">
+            <summary>
+            Враг
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.Models.Fissures_Date.tier">
+            <summary>
+            Эра
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.Models.Fissures_Date.expired">
+            <summary>
+            Является ли оконченой
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.Models.Fissures_Date.eta">
+            <summary>
+            Сколько осталось до завершения
+            </summary>
+        </member>
+        <member name="T:ApiWarframe.Apis">
+            <summary>
+            Список API или WS
+            </summary>
+        </member>
+        <member name="T:ApiWarframe.HTTPs">
+            <summary>
+            Защищенный протокол или нет
+            </summary>
+        </member>
     </members>
 </doc>
