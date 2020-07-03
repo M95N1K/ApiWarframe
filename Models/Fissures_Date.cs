@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ApiWarframe.Models
 {
-    public class Fissures_Date 
+    public class Fissures_Date
     {
 
         public int tierNum { get; set; }
@@ -56,6 +56,23 @@ namespace ApiWarframe.Models
         public Fissures_Date()
         { }
 
-        
+        public Fissures_Date Clone()
+        {
+            Fissures_Date result = new Fissures_Date();
+            result.activation = activation;
+            result.tierNum = tierNum;
+            result.tier = tier;
+            result.id = id;
+            result.startString = startString;
+            result.expiry = expiry;
+            result.active = active;
+            result.node = node;
+            result.missionType = missionType;
+            result.enemy = enemy;
+            result.expired = expired;
+            result.eta = eta;
+
+            return result;
+        }
     }
 }
