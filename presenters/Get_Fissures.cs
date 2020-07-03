@@ -16,22 +16,19 @@ namespace ApiWarframe
             /// <summary>
             /// Возврощает список миссий разрыва бездны
             /// </summary>
-            public List<Fissures_Date> Fissures { get; private set; }
+            public List<MFissures_Date> Fissures { get; private set; }
 
             /// <summary>
             /// Конструктор ЛЕГО
             /// </summary>
-            public Get_Fissures()
-            {
-                suburl = "fissures";
-            }
+            public Get_Fissures() => suburl = "fissures";
 
             /// <summary>
             /// Обновляет данные
             /// </summary>
             public void UpdateData()
             {
-                Fissures = GetDate<List<Fissures_Date>>(suburl);
+                Fissures = GetDate<List<MFissures_Date>>(suburl);
                 Sort();
             }
 
@@ -43,9 +40,9 @@ namespace ApiWarframe
             
         }
 
-        private class Comper : IComparer<Fissures_Date>
+        private class Comper : IComparer<MFissures_Date>
         {
-            public int Compare(Fissures_Date x, Fissures_Date y)
+            public int Compare(MFissures_Date x, MFissures_Date y)
             {
                 if (x == null)
                 {

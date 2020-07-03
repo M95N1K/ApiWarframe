@@ -4,6 +4,11 @@
         <name>ApiWarframe</name>
     </assembly>
     <members>
+        <member name="T:ApiWarframe.API_Warframe">
+            <summary>
+            Базовый класс взаимодействия с сервером WarFrame, в котором устанавливаются опции взаимодействия
+            </summary>
+        </member>
         <member name="M:ApiWarframe.API_Warframe.SetOption(ApiWarframe.HTTPs,ApiWarframe.Apis,System.String,System.String)">
             <summary>
             Указывает тип соединения, платформу и язык, которые будут использоваться при загрузке данных
@@ -21,17 +26,58 @@
             <param name="suburl">Подстрока адресса по которой выдаются данные</param>
             <returns></returns>
         </member>
+        <member name="T:ApiWarframe.API_Warframe.Arbitration_data">
+            <summary>
+            Класс с данными миссии арбитража
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.API_Warframe.Arbitration_data.ArbitrationData">
+            <summary>Данные миссии арбитража</summary>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Arbitration_data.#ctor">
+            <summary>Конструктор</summary>
+        </member>
         <member name="M:ApiWarframe.API_Warframe.Arbitration_data.UpdateData">
             <summary>
             Обновляет данные
             </summary>
         </member>
-        <member name="M:ApiWarframe.API_Warframe.Cetus_rotation.UpdateData(System.Int32,System.Int32)">
+        <member name="T:ApiWarframe.API_Warframe.Cetus_rotation">
+            <summary>
+            Класс с данными о дне и ночи на Равнинах Эйдолона
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.API_Warframe.Cetus_rotation.CetusRotation">
+            <summary>
+            Данные о дне и ночи на Равнинах Эйдолона
+            </summary>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Cetus_rotation.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Cetus_rotation.UpdateData">
             <summary>
             Обновляет данные
             </summary>
         </member>
-        <member name="M:ApiWarframe.API_Warframe.Earth_rotation.UpdateData(System.Int32,System.Int32)">
+        <member name="T:ApiWarframe.API_Warframe.Earth_rotation">
+            <summary>
+            Класс с данными о дне и ночи в миссиях на Земле
+            </summary>
+        </member>
+        <member name="P:ApiWarframe.API_Warframe.Earth_rotation.EarthRotation">
+            <summary>
+            Данные о дне и ночи в миссиях на Земле
+            </summary>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Earth_rotation.#ctor">
+            <summary>
+            Конструктор
+            </summary>
+        </member>
+        <member name="M:ApiWarframe.API_Warframe.Earth_rotation.UpdateData">
             <summary>
             Обновляет данные
             </summary>
@@ -58,7 +104,7 @@
         </member>
         <member name="P:ApiWarframe.API_Warframe.Orb_Vallis.OrbVallisData">
             <summary>
-            
+            Класс показывающий холодно или тепло в долине сфер
             </summary>
         </member>
         <member name="M:ApiWarframe.API_Warframe.Orb_Vallis.UpdateData">
@@ -66,45 +112,47 @@
             Обновляет данные
             </summary>
         </member>
-        <member name="P:ApiWarframe.Models.Fissures_Date.expiry">
-            <summary>
-            Дата окончания
-            </summary>
+        <member name="P:ApiWarframe.Models.MFissures_Date.tierNum">
+            <summary>Номер Эры миссии</summary>
         </member>
-        <member name="P:ApiWarframe.Models.Fissures_Date.active">
-            <summary>
-            Активность
-            </summary>
+        <member name="P:ApiWarframe.Models.MFissures_Date.id">
+            <summary>ID миссии</summary>
         </member>
-        <member name="P:ApiWarframe.Models.Fissures_Date.node">
-            <summary>
-            Узел миссии
-            </summary>
+        <member name="P:ApiWarframe.Models.MFissures_Date.activation">
+            <summary>Дата начала миссии</summary>
         </member>
-        <member name="P:ApiWarframe.Models.Fissures_Date.missionType">
-            <summary>
-            Тип миссии
-            </summary>
+        <member name="P:ApiWarframe.Models.MFissures_Date.startString">
+            <summary>Строковое значение времени начала</summary>
         </member>
-        <member name="P:ApiWarframe.Models.Fissures_Date.enemy">
-            <summary>
-            Враг
-            </summary>
+        <member name="P:ApiWarframe.Models.MFissures_Date.expiry">
+            <summary>Дата окончания</summary>
         </member>
-        <member name="P:ApiWarframe.Models.Fissures_Date.tier">
-            <summary>
-            Эра
-            </summary>
+        <member name="P:ApiWarframe.Models.MFissures_Date.active">
+            <summary>Активность</summary>
         </member>
-        <member name="P:ApiWarframe.Models.Fissures_Date.expired">
-            <summary>
-            Является ли оконченой
-            </summary>
+        <member name="P:ApiWarframe.Models.MFissures_Date.node">
+            <summary>Узел миссии</summary>
         </member>
-        <member name="P:ApiWarframe.Models.Fissures_Date.eta">
-            <summary>
-            Сколько осталось до завершения
-            </summary>
+        <member name="P:ApiWarframe.Models.MFissures_Date.missionType">
+            <summary>Тип миссии</summary>
+        </member>
+        <member name="P:ApiWarframe.Models.MFissures_Date.enemy">
+            <summary>Враг</summary>
+        </member>
+        <member name="P:ApiWarframe.Models.MFissures_Date.tier">
+            <summary>Эра</summary>
+        </member>
+        <member name="P:ApiWarframe.Models.MFissures_Date.expired">
+            <summary>Является ли оконченой</summary>
+        </member>
+        <member name="P:ApiWarframe.Models.MFissures_Date.eta">
+            <summary>Сколько осталось до завершения</summary>
+        </member>
+        <member name="M:ApiWarframe.Models.MFissures_Date.#ctor">
+            <summary>Конструктор</summary>
+        </member>
+        <member name="M:ApiWarframe.Models.MFissures_Date.Clone">
+            <summary>Клонирование значения</summary>
         </member>
         <member name="T:ApiWarframe.Apis">
             <summary>

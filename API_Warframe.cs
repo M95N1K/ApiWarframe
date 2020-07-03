@@ -6,6 +6,9 @@ using System.Runtime.CompilerServices;
 
 namespace ApiWarframe
 {
+    /// <summary>
+    /// Базовый класс взаимодействия с сервером WarFrame, в котором устанавливаются опции взаимодействия
+    /// </summary>
     public partial class API_Warframe
     {
         static internal HTTPs https { get; private set; }
